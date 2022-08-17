@@ -1,7 +1,7 @@
-FROM matomo.azurecr.io/matomo
+FROM matomoacr.azurecr.io/matomo:basic
 
 COPY config.ini.php /var/www/html/config/
 
-#COPY /home/hj/IP2Location/ /var/www/html/plugins/
+COPY IP2Location/ /var/www/html/plugins/IP2Location/
 
-#COPY /home/hj/QueuedTracking/ /var/www/html/plugins/
+COPY QueuedTracking/ /var/www/html/plugins/QueuedTracking/
